@@ -1,8 +1,14 @@
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 /* Estilos para el encabezado */
 
-
 header {
-    background-color:rgb(168, 132, 132); 
+    background-color:#120c07; 
     background-size: cover;
     display: flex;
     justify-content: space-between;
@@ -11,14 +17,14 @@ header {
   }
   header .logo {
   margin:0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 header h2{
   margin-top: 0%;
 }
 
   header .nombre {
-    color: #000000;
+    color: #a2a2a2;
     font-size: 70px;
     margin-right: 10px;
   }
@@ -28,21 +34,28 @@ header h2{
   }
   
   header nav ul {
-    list-style: none;
     display: flex;
+   
   }
   
   header nav ul li {
     margin-left: 25px; 
+    list-style-type: none;
+
   }
   
   header nav ul li a {
-    color: #000000;
+    color: #dedede;
     text-decoration: none;
     box-sizing: border-box;
     font-size: 23px;
-
+    
   }
+  header nav ul :hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+ 
   
 
   #inicio{
@@ -59,38 +72,57 @@ header h2{
   #inicio h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 80px;
+    ;
+  }
+  #inicio h3{
+    color: #000000;
+    font-size:  30px; ;
   }
   #carac{
     text-align: left;
-    background-color: rgb(101, 91, 37)
-  
-
+    background-color: rgb(60, 42, 33);
+    display: grid;
+    grid-template-columns: 55% 45%;
+    height:400px ;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
     
   }
- .fotopibe img{
-  width: 250px;
-  
- }
+  #carac ul li{
+    font-size: 28px;
+    color: #a2a2a2;
+  }
+  #carac ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+  }
+ 
  /* Estilos para el footer */
 footer {
- background-color: rgb(53, 35, 11);
+ background-color: rgb(188, 188, 188);
   padding: 20px;
-  text-align: center;
-  
+  text-align: center;  
 }
-
-
 
 .footer-seccion {
   margin-right: 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .footer-seccion h3 {
   margin-bottom: 10px;
   color: rgb(0, 0, 0);
+  font-size: 38px;
 }
-.footer-seccion Horario{
-  color: rgb(0, 0, 0);
+.footer-seccion p{
+  color: #000000;
+  font-size: 28px;
+
 }
 
 .footer-bottom {
@@ -103,52 +135,97 @@ footer {
   background-image:url(./img/produccion.jpg) ;
   background-size:cover ;
   margin-top: 0px;
-}
-#produccion h1{
-  text-align: center;
   
 }
-h1 {
+
+
+
+#produccion .carta {
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  height: 500px;
+  border: 1px solid white;
+  
+}
+
+
+.carta h3 {
   font-size: 50px;
   margin-bottom: 0px;
-}
-
-.carta {
-  background-image:url(./img/produccion.jpg);
-  padding: 20px;
-  margin-bottom: 0px;
-}
-
-h3 {
-  font-size: 36px;
-  margin-bottom: 0px;
+  color: #ffffff;
 }
 
 p {
-  font-size: 18px;
+  font-size: 38px;
+  color: #a2a2a2;
 }
 /*Estilo para donde encontrarnos*/
 #Sucursales{
   background-image: url(../img/ubi.jpg);
-  display: flex;
-  flex-direction: column;
-  align-items: ;
+  display: grid;
   
 }
+
 #Sucursales h1{
   color: #000000;
   text-align: center;
+  font-size: 60px;
+  border-radius: 10px;
+
 }
 #Sucursales h5{
   font-size: 30px;
   color: rgb(0, 0, 0);
-  text-align: center;
+  text-align: center; 
 }
-#Sucursales li{
-  font: size 30px;
-  color: #fff
- ;
+#Sucursales ul {
+  display: grid;
+  grid-template-areas: 
+    "li1 li2 li3"
+    "iframe1 iframe2 iframe3";
+  grid-gap: 10px;
 }
+
+#Sucursales li {
+  font-size: 30px;
+  color: #000000;
+  border: ridge 6px black;
+  list-style-type: none;
+}
+#Sucursales li:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#Sucursales iframe {
+  width: 100%;
+  height: 350px;
+}
+
+#Sucursales li:nth-child(1) {
+  grid-area: li1;
+}
+
+#Sucursales li:nth-child(2) {
+  grid-area: li2;
+}
+
+#Sucursales li:nth-child(3) {
+  grid-area: li3;
+}
+
+#Sucursales iframe:nth-child(4) {
+  grid-area: iframe1;
+}
+
+#Sucursales iframe:nth-child(2) {
+  grid-area: iframe2;
+}
+
+#Sucursales iframe:nth-child(3) {
+  grid-area: iframe3;
+}
+
 /* Estilos para sobre nosotros*/
 #Sobre {
   background-color: #0C0501;
@@ -157,18 +234,26 @@ background-attachment: fixed;
 background-size: cover;
 color: #fff;
 
+
+
+
+
 }
 #Sobre h3{
-  text-align: end;
-  text-decoration-line:underline;
-  
+  text-align: center;
+  border:ridge 6px white;
 }
-#Sobre h3 p{
+#Sobre  p{
   text-align: end;
+  font-size: 25px;
+  margin-right: 20px;
+  margin-left: 0;
 }
+
 /*Estilos para contacto*/
 #contacto{
   background-color:#0C0501;
+  height: 400px;
 }
 #contacto h2{
   text-align: center;
@@ -181,8 +266,55 @@ color: #fff;
   font: size 22px; ;
 }
 #contacto ul li{
-  list-style: circle;
+  list-style: none;
   color: #fff;
+  font-size: 15px;
  
 }
+/* Estilos para dispositivos moviles en contacto.html y sobre nosotros.html*/
+@media screen and (max-width: 580px) {
+  #contacto h2{
+    font-size: 30px;
+  }
+  #contacto  p{
+    font-size: 20px;
+  }
+  footer p{
+    font-size:18px ;
+  }
+
+  footer{
+    height: 200px;
+  }
+  header nav ul li {
+    margin-right: 15px;
+    margin-left: 0%;
+  }
+  header nav ul li a{
+    font-size: 18px ;
+    text-align: justify;
+  }
+  header{
+    display: block;
+  }
+  
+  header nav {
+    height:60px ;
+  }
+
+  .logo h2 {
+    font-size: 40px;
+    margin-right: 0;
+    text-align: center;
+  }
+  #Sobre img{
+    height: 300px;
+  }
+  #Sobre p{
+    font-size: 13px;
+  }
+
+  
+  
+  }
   
