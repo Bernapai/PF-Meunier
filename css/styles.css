@@ -1,4 +1,33 @@
 /*VARIABLES*/
+header {
+  background-color: #120c07;
+}
+
+/* maps */
+#uno {
+  color: white;
+}
+
+#dos {
+  color: white;
+}
+
+#tres {
+  color: white;
+}
+
+#cuatro {
+  color: white;
+}
+
+#cinco {
+  color: white;
+}
+
+#seis {
+  color: white;
+}
+
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -10,25 +39,20 @@ body {
 
 /* Estilos para el encabezado */
 header {
-  background-color: #120c07;
+  background-color: normal;
   background-size: cover;
   display: flex;
   justify-content: space-between;
-  height: 150px;
-  
-  
+  height: 100px;
 }
 header .logo {
   margin: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
- 
-  
 }
 header h2 {
-  margin-top: 0%;
-  margin-left: 30px;
+  margin-top: 8px;
 }
-header .nombre  {
+header .nombre {
   color: #a2a2a2;
   font-size: 70px;
   margin-right: 10px;
@@ -39,15 +63,11 @@ header nav {
 }
 header nav ul {
   display: flex;
-  
-  
- 
 }
 header nav ul li {
-  margin-left: 25px;
+  margin-left: 30px;
   list-style-type: none;
-  
-  
+  margin-right: 8px;
 }
 header nav ul li a {
   color: #dedede;
@@ -58,6 +78,7 @@ header nav ul li a {
 header nav ul :hover {
   transform: scale(1.1);
   cursor: pointer;
+  box-shadow: 5px 5px 5px white;
 }
 
 #inicio {
@@ -261,35 +282,33 @@ p {
   footer p {
     font-size: 18px;
   }
-}
-header {
-  display: block;
-}
-header nav {
-  height: 60px;
-}
-header nav ul li {
-  margin-right: 15px;
-  margin-left: 0%;
-}
-header nav ul li a {
-  margin-right: 15px;
-  margin-left: 0%;
-  font-size: 18px;
-  text-align: justify;
-}
-
-.logo h2 {
-  font-size: 40px;
-  margin-right: 0;
-  text-align: center;
-}
-
-#Sobre img {
-  height: 300px;
-}
-#Sobre p {
-  font-size: 13px;
+  header {
+    display: block;
+  }
+  header nav {
+    height: 60px;
+  }
+  header nav ul li {
+    margin-right: 15px;
+    margin-left: 0%;
+  }
+  header nav ul li a {
+    margin-right: 15px;
+    margin-left: 0%;
+    font-size: 18px;
+    text-align: justify;
+  }
+  .logo h2 {
+    font-size: 40px;
+    margin-right: 0;
+    text-align: center;
+  }
+  #Sobre img {
+    height: 300px;
+  }
+  #Sobre p {
+    font-size: 13px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

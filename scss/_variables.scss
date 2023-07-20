@@ -1,1 +1,32 @@
 /*VARIABLES*/
+$fondo: normal ;
+
+
+@if $fondo==navidad{
+    header{
+        background-color: #ae0b11;
+}
+
+}
+@else if $fondo==normal{
+    header{
+        background-color: #120c07;
+    }
+
+}
+/* maps */
+
+$tips:(
+    uno: white,
+    dos :white,
+    tres :white,
+    cuatro :white,
+    cinco:white,
+    seis:white
+);
+#uno{ color: map-get($tips, uno)}
+#dos{ color: map-get($tips, dos )}
+#tres{ color: map-get($tips, tres)}
+#cuatro{ color: map-get($tips, cuatro)}
+#cinco{ color: map-get($tips, cinco )}
+#seis{ color: map-get($tips, seis )}
